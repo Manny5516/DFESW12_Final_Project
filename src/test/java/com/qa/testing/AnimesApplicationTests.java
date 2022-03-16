@@ -1,10 +1,10 @@
-package com.qa;
+package com.qa.testing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Dfesw12FinalProjectApplicationTests {
+class AnimesApplicationTests {
 
 	@Test
 	void contextLoads() {
