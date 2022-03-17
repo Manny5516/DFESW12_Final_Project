@@ -31,7 +31,7 @@ public class AnimesServiceDB implements AnimesInterface<Long>{
 	@Override
 	public Animes readId(Long id) {
 		Optional<Animes> optRead = this.repo.findById(id);
-		return optRead.orElse(null);
+		return optRead.orElse(null); //can also add message to enter a valid id
 	}
 
 	@Override
