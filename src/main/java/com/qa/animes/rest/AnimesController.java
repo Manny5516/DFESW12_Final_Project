@@ -2,6 +2,8 @@ package com.qa.animes.rest;
 
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -53,7 +55,7 @@ public class AnimesController {
 	} 
 		
 		@DeleteMapping("/remove")
-		public ResponseEntity<Boolean> remove(@PathVariable Long id) {
+		public ResponseEntity<Boolean> remove(@PathParam("id") Long id) {
 			return new ResponseEntity<Boolean>(this.service.remove(id), HttpStatus.GONE);
 		} 
 		
