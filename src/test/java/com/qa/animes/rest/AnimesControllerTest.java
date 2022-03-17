@@ -49,7 +49,7 @@ public class AnimesControllerTest {
 	void testRemove() throws Exception {
 		Long id = 1L;
 		RequestBuilder mockRequest = delete("/remove/?id="+id);
-		ResultMatcher status = status().isOk();
+		ResultMatcher status = status().isGone();
 		ResultMatcher body = content().string("true");
 		this.mock.perform(mockRequest).andExpect(body).andExpect(status);
 	}
