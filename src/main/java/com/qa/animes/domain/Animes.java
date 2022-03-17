@@ -1,5 +1,7 @@
 package com.qa.animes.domain;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -76,6 +78,25 @@ public class Animes {
 
 		public void setAnimeStudio(String animeStudio) {
 			this.animeStudio = animeStudio;
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(animeGenre, animeName, animeStudio, id, yearOfProduction);
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Animes other = (Animes) obj;
+			return Objects.equals(animeGenre, other.animeGenre) && Objects.equals(animeName, other.animeName)
+					&& Objects.equals(animeStudio, other.animeStudio) && Objects.equals(id, other.id)
+					&& yearOfProduction == other.yearOfProduction;
 		}
 		
 		
