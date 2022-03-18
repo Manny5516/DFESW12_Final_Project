@@ -32,7 +32,6 @@ public class AnimesController {
 			return new ResponseEntity<Animes>(this.service.create(a), HttpStatus.CREATED); 
 		}
 		
-		
 		@GetMapping("readAll")
 		public ResponseEntity<List<Animes>> readAllAnimes() { 
 		return new ResponseEntity<List<Animes>>(this.service.read(), HttpStatus.ACCEPTED); 
